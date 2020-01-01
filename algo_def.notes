@@ -1,0 +1,20 @@
+Five requirements for an algorithm:
+- finiteness
+    - an algorithm must always terminate after a finite number of steps.
+- definiteness
+    - each step of an algoirthm must be precisely defined; the actions to be carried out must be rigourously and unambiguously specified for each case
+- input
+    - an algorithm has zero or more inputs
+- output
+    - an algoirthm has one or more outputs
+- effectiveness
+    - an algorithm is also generally expected to be effective in the sense that its operations must all be sufficiently basic that they can in principle be done exactly and ina finite length of time by someone using pen and paper.
+Mathematical preliminaries:
+- proof by mathematical induction
+    - base case
+    - assume for case n
+    - off of that assumption prove for case n + 1
+- proofs of correctness and proofs of termination are generally handled seperately
+- logb(xy) = lobb(x) + logb(y)
+- logb(c^y) = ylogb(c)
+- logc(x) = logb(x)/logb(c)

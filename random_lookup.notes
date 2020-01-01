@@ -1,0 +1,3 @@
+What are routines and subroutines?:
+- a routine or subroutine also referred ti as function procedure and subprogram is code that may be called and executed anywhere in a program. for example a routine may be used to save a file or display the time.
+- just another name for encapsulation of code within an object to be ran at call time rather than run time of the general program.

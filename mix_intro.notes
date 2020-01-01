@@ -1,0 +1,40 @@
+!Intro to MIX computer basics!
+Basics:
+- mythical computer called MIX
+- tho this is an outdated architecture now and is being replaced by risc style MMIX with computation on 64-bit words
+- polyunsaturated computer
+- both binary and decimal at the same time
+- it is not known whether programs are run on a base 10 or 2 machine and thus programs can be extrapolate to either
+- basic unit is a byte
+- capable of a minimum of 64 distinct values
+- at most 1000 distinct values
+- binary computer byte = 6 bits 2^6
+- decimal computer byte = 2 bits 10^2
+- in this model the only correct programs are those that work regardless of byte size
+Registers:
+- there are nine registers in MIX
+- the a register(accumulator) consists of five bytes and a sign
+- the x register(extensions) likewise comprises five bytes and a sign.
+- the i registers(index registers) I1-6, each hold two bytes together with a sign.
+- the j register(jump address) holds two bytes and it behaves as if its sign is always positive
+- lowercase r + letter = register(rA, rX, ...)
+- overflow toggle, a single bit that is either on or off
+- a comparision indicator(iether less, equal, or greater)
+- memory (4000 words of storage each word with dice bytes and a sign)
+- input-output devices (cards, tapes, disks, etc)
+- field specification - (L:R)   word = [0,1,2,3,4,5] 0 is the sign and 1-5 are bytes
+- (0:0) just the sign
+- (0:2), the sign and the first two bytes .... etc
+Instruction format:
+- computer words used for instructions have the following form:
+    - [0,1,2,3,4,5]
+    - [+-,A,A,I,F,C]
+    - the rightmost byte c is the operation code telling what operation is to be performed.
+    - the F byte holds a modification of the operation code usually a field specification as above
+    - +-AA is the address 
+    - the I field is the index specification
+
+
+
+
+

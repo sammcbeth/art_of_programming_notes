@@ -33,8 +33,67 @@ Instruction format:
     - the F byte holds a modification of the operation code usually a field specification as above
     - +-AA is the address 
     - the I field is the index specification
+Loading operators:
+- LDA (Load a)
+- LDX (load X) where x is a register
+- LDi (load i) this is the same as LDA except that rIi is loadied instead of rA. an index register contains only two bytes.
+- LDAN(load A negative) 
+- LDXN
+- LDiN
+Storing Operators:
+- STA(store A)- a portion of the contents of rA replaces the field of contents m specified by f.
+- STX
+- STi 
+- STJ
+- STZ same as STA except that zero is stored. in other words the specified field of contents m is cleared to zero
+Arithmetic Operators:
+- ADD V is added to rA if the magnitude of the result is too large for register A the overflow toggle is set on and the remainder of the addition appearing in rA is as thoa  1 had been carried into another register to the elft of rA.
+- SUB(subtract) V is subtracted from rA
+- MUL(multiply) the 10 byte product V times rA replaces registers A and X. the signs of rA and rX are both set to the algebraic sign of the product. 
+- DIV (divide) the value of rA and rX treated as a 10-byte number rAX with the sign of rA is divided by the value V. 
+Address Transfer operators:
+- ENTA(enter a) the quantity m is loaded into rA. the action is equivalent to LDA from a memory word containing the signed value of m. 
+- ENTX(enter x)
+- ENTi(enter i)
+- INCA(increase a)
+- the quantiity M is added to rA the action is equivalent to ADD froma  memory word containing the value of M. overflow is possible and it is treated just as in ADD
+- INCX(increase X) the quantity M is added to rA; the action is equivalent to ADD except that rX is used instead of rA. register A is never affected by this instructions
+- INCi(increase i) Add M to rIi. overflow must not occur. if M + rLi doesnt fit in two bytes the result of the instruction is undefined.
+- DECA(decrease A)
+- DECX
+- DECi 
+Comparison Operators:
+- Mix;s comparison operators all compare the value contained in a register witha  vlaue contained in memory. the comparison indicator is then set to less equal or greatere according to whether the value of the register is less than qual to or greater than the balue of the memory cell. a minus zero is equal to a plus zero.
+- CMPA(compare A) the specified field of rA is compared with the same field of contents <. if F does not include the sign position the fields are both considered nonnegative. 
+- CMPX
+- CMPi 
+Jump operators:
+- instructions are ordinarily executed in in sequential order in other word s the command that is performed after the command in location p is usually the one found in location P + 1.
+- JMP(jump) unconditional jump. the next instruction is taken from location M.
+- JSJ (jump, save J) same as JMP except that the contents of rJ are unchanged
+- JOV( jump on overflow) if the overflow toggle is on it is turned off and a JMP ovvurs otherwise nothing happens.
+- JNOV (jump on no overflow) if the overflow toggle is off a JMP ovvurs. otherwise it is turned off.
+- JL, JE, JG, JGE< JNE, JLE(jump on less, equal, greater, greater-or-equal, unequal, less-or-equal)
+MISC operators:
+- SLA, SRA, SLAX, SRAX, SLC, SRC(shift left A, shift lright A, .....)
+- these are six shift commands in whcih M specifies a number of MIX bytes to be shifted left or right. 
+- MOVE the number of words specified by F is moved starting from location m  to the location specified by the contents of indiex register 1. the transfer occurs one word at a time. and rIi is increased by the value of F at the end of the operation. if f= 0 nothing happens. 
+- NOP (no operation) no opertation occurs and this instruction is bypassed, F and M are ignored.
+- HLT (halt) the machin stops when the computer operator restarts it the net effect is equivalent to NOP
+Input Output operators:
+- IN(input) this instruction initiates the transfer of information from the input unit specified into consecutive locations starting with M. the number of locations transferred is the block size for this unit. 
+- OUT(output) this instruction starts the transfer of information from memory locations starting at M to the output unit specified
+- IOC(input output control) 
+- JRED(jump ready) a jump occurs if the specified unit is ready that is finished with the preciding operation
+- JBUS(jump busy) analogous to JRED but the jump occurs when the specified unit is not ready.
+- in location 1000 the instruction JBUS 1000(16) will be executed repeatedly until unit 16 is ready.
+Conversion operators:
+- NUM(conver to numberic)
+- CHAR(convert ot characters)
+TIMING:
+- the various operations detailed above have default units of time that they take. reference page 138 for that info.
+- 
 
-
-
+ 
 
 

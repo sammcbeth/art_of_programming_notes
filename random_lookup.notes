@@ -1,3 +1,7 @@
 What are routines and subroutines?:
 - a routine or subroutine also referred ti as function procedure and subprogram is code that may be called and executed anywhere in a program. for example a routine may be used to save a file or display the time.
 - just another name for encapsulation of code within an object to be ran at call time rather than run time of the general program.
+What are Registers?:
+- In computer architectur a processer register is a quickly accessuible location available to a computers central processing unit. register usually consist of a small amount of fast storage although some registers have specific hardware functionns and may be read only or write only. 
+- simple: registers are the lowest down version of memory hierarchy where something like main memory is loaded into in order to do arithmetic calculartions or other operations.
+- 

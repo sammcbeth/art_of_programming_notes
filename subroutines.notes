@@ -1,0 +1,32 @@
+!subroutines!
+- abstraction of code into blocks that can be called multiple times rather than being written multiple times
+- transfer of control between subroutines and main programs is called subroutine linkage
+- the extra time taken to enter and leave a subroutine is usually negligible
+- they form a logical segmentation of the entire problem
+- when a subroutine is written to work in a general case it is specified by parameters
+- the coding in the outside program that transfers control to the subroutine and gets it properly started is known as the calling sequence.
+- multiple exit means that we want the subroutine to return to one of several different locations depending on the conditions detected by the subroutine.
+- the only restriction that must be followed when using linkage as described here is that no subroutine may call on any other subroutine that is directly or indirectly calling on it.
+    - not sure if this has any implications for recursion in this model?
+Process to go about writing a complex program:
+- step 0(inital idea)
+    - first we decide vaguely upon the general plan of attack the progam will use.
+- step 1(a rough sketch of the program)
+    - we start now by wrting the outer levels of the program in any convenient language
+    - begin by breaking the whole program into a small nnumber of pieces
+    - these pieces are successively refined into smaller and ssmallerparts having correespoibdibky simpler jobs to do
+    - whenever some computational task arises that seems likely to occur elsewhere or that has already ovvured elsewhere we define a subroutine to do that job.
+    - dont write the subroutine yet simply assume that it works
+    - iterate through the program till the job is done
+    - work back through subroutines writing one at a time.
+- step 2(first working program)
+    - we now write in computer language we start this time with the lowest level subroutines and do the main program last.
+    - as far as possible we try never to write any instructions that call a subroutine before the subroutine itself has been coded.
+!After an individual subroutine is coded we should immegiately prepare a complete description of what it does and what its calling sequences are!
+- Step 3(reexamination)
+    - look for improvements
+    - maybe several subroutines should be merged into one or the inverse
+- Step 4(Debugging)
+    - study the program in the order in which the computer will perform it
+    - best debugging methodology is to include it test of a program in that program
+    - 

@@ -1,0 +1,8 @@
+!Mixal assembly language!
+- serves as an assembly language for mix computer for sake of time and simplicity.
+- allows for the combination of a bunch of machine code into simpler program calls such as
+    - maximum 
+    - init
+    - loop
+    - changem
+    - exit

@@ -1,0 +1,13 @@
+! information stucturs or data structures intro notes !
+- the basic relationships between 'tables' of data stored within a table that are not simple amorphous blobs.
+- List processing:
+    - referes to a general type of data stucture(i assume lists/arrays)
+    - languages have predifined list processing systems but in the authors opinion:
+        it is usually better to use the methods of this chapter directly in ones own programs tailoring the data format and the processing algorithms to the particular algorithm.
+- the information in a table consists of a set of nodes(called records entities or beads)
+- occasionally say item or elements instead of nodes
+- the address of a node also called a link, pointer, or reference to that node
+- seems to center around breaking up objects that we see or interpret as one entire thing into objects in the computer science sense. i.e. going from three playing cards to a data structure representation for those cards.
+- !links are the key to to the representation of complex structures!
+- a link variable often also called a pointer variable whose value is a link.
+- 

@@ -1,0 +1,28 @@
+! Linear Lists: stacks queues and deques!
+- for each problem we consider nnot only the data structure but also the class of operations to be done on the data; the design of computer representations depends on the desired function of the data as well as on its intrinsic properties
+- Def:
+    - Linear List:
+        - a linear lst us a seqyebce if n >= 0 nodes whose essential stuctural properties involve only the relative positions between items as they appear in a line. 
+        - operations:
+            - gain access to the kth node of the list to examine and or to change the contents of its fields
+            - insert a new node just before or after the kth node.
+            - delete the kth node
+            - combine tow or more linear lists into a single list
+            - split a linear list into two or more lists
+            - make a copy of a linear list
+            - determine the number of nodes in a list
+            - sort the nodes of the list into ascending order based on certain fields of the nodes.
+            - search the list for the occurrence of a node with a particular value in some field
+    - Stack:
+        - a stack is a linear list for which all insertions and deletions and usually all accesses are made at one end of the list
+    - Queue:
+        - a queue is a linear list for whihc all insertions are made at one end of the list. all deltions and usually all accesses are made at the other end
+    - Deque:
+        - a double ended queue is a linear list for which all insertions and deletions and usually all accesses ae made at the ends of the list.
+- stacks have been called push down lists, reversion storages, cellars, nesting stores, piles, last in first out lists and even yoyo lists.
+- queues are sometimes called circular stores or first in first out lists.
+- we out an item onto the top of a stack or take the top item off
+- the bottom of the stack is the least accessible item
+- push an item down onto a stack or pop an item off of the top of a stack.
+- with queues we speak of the front and rear of the queue. things enter at the rear and are removed when they ultimately reach the front position.
+- when referring to deques we speak of the left and right ends.

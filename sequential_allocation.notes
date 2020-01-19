@@ -1,0 +1,4 @@
+!Sequential Allocations!
+- the simplest and most natural way to keep a linear list inside a computer is to put the list items in consecutive locations one node after the other.
+- Sequential Allocation works well for stacks since we simply have a pointer defined as a stack pointer which points to the top of the stack.
+- 

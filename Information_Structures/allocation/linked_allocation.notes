@@ -1,0 +1,15 @@
+!Linked Allocation! Sounds like its going to be linked lists
+- instead of keeping a linear list in sequential locations we can make use of a much more flecible shceme in which each node contains a link to the next node of the list.
+- define a link variable pointing to the first node of the list. 
+    - this seems to me to be the same concept as a sentinel node.
+- linked lists take up addition space in memory due to the links however some of that inneficiency is gained back thanks to the premise that the storage does not need to be sequential thus allowing multiple structure to be stored in a more intertwined manner.
+- it is easy to delete an item from a link list since you only need to take the pointer directing to that node and point it to the following node instead.
+- with sequential allocation this tends to be a much more tedious and inneficient process.
+- similarly it is easier to insert into a linked list schema than it is into a sequential one.
+- getting the kth element in sequential memory is much faster than it is in linked memory.
+- thus the usefullness of linked memory is predicated upon the fact that in the large majority of applications we want ot walk through lists sequentially not randomly.
+- the linked scheme makes it easier to to join two lists together or to break one apart into two that will grow independently
+- the linked scheme lends itself immediately to more intricate sturctures than simple linear lists.
+- can have a variable number of variable sized lists; any node of the list may be a starting point for another list the nodes may be simultaneously linked together in server orders correspoinding to different lists and so on.
+- simple ops like proceeding sequentially through a list are slightly faster for sequential lists on many computers.
+- 

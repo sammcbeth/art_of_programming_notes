@@ -1,0 +1,6 @@
+!circular lists!
+- a circularly linked list has the property that its last node links back to the first instead of to Alpha.(sentinel node)
+- Implementation: 
+    - there is a link variable PTR that points to the rightmost node of the list and LINK(PTR) is the address of the leftmost node.
+    - ie have the sentinel node point at the "last" node in the circular list which itself points at the "first" node.
+    - 

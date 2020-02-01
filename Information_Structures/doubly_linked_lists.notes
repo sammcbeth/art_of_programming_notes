@@ -1,0 +1,7 @@
+!Doubly Linked Lists!
+- same implementation as a simple linked list but rather than having one pointer to the next node each node contains two pointers, one to the node infront and one to the node behind.
+- allows for more flexible travel between nodes
+- operations on these lists almost always become simpler with a list head node(sentinel node)
+- a doubley linked list usually takes more memory space than a singly linked one does. 
+- removing a node becomes easier since each node has the info of what is behind and infront and we mearly need to change the pointers of those nodes.
+- 

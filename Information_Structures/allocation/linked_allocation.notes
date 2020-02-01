@@ -12,4 +12,5 @@
 - the linked scheme lends itself immediately to more intricate sturctures than simple linear lists.
 - can have a variable number of variable sized lists; any node of the list may be a starting point for another list the nodes may be simultaneously linked together in server orders correspoinding to different lists and so on.
 - simple ops like proceeding sequentially through a list are slightly faster for sequential lists on many computers.
+- partial orderings must not have any closed loops because to then organize it into a linear ordering with arrows only moving in one direction would be impossible.
 - 

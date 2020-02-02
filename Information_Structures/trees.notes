@@ -1,1 +1,50 @@
 !Trees!
+- Definition:
+    - a finite set T of one or more nodes such that
+        - there is one specially designated node called the root of the tree, root(T)
+        - the remaining nodes are partitioned into m >= 0 disjoingt sets and each of these sets in turn is a tree. those trees are called the subtrees of the root.
+- top node is called the root node
+- level of a node refers to distance from top.(root node being level 0)
+- degree of a node referes to the amount of subtrees that node supports.
+- if the relative order of the subtrees is important we say that is it an ordered tree.
+- if order is not important we call it an oriented tree
+- !A Forest is a set (usually an ordered set) of zero or more disjoint trees.!
+- we will by convention draw trees with the root node at the top branching downwards
+- root node could now be called the apex of the tree.
+- each root is said to be the parent of the roots of its subtrees
+- the latter are said to be siblings
+- they are children of their parents
+- Binary Tree:
+    - in a binary tree each node has at most two subtrees
+    - Def:
+        - a finite set of nodes that either is empty or consists of a root and the elements of two disjoint binary trees called the left and right subtrees of the root.
+    - because we know that they are binary the left and right subtrees are integral components that can be referenced.
+    - this makes them an altogether different data structure than simple trees.
+- Technical Definition of List:
+    - a lList is defined recursively as a finite sequence of zero or more atoms or Lists. Here atom is an undefined concept referring to elements from any univers of objects that might be desired so long as it is possible to distinguish an atom from a list.
+- the big difference between lists and trees is that lists may overlap and they may even be recursive.
+! Traversing Binary Trees!
+- Definition:
+    We define a binary tree as a finites set of nodes that either is empty or consists of a root together with two binary trees.
+- essentially represented as a doubly linked list where the sentinel node points to the root if there is one and each link on each node points to its child left and right subtrees.
+- the notion of traversing or walking through a tree:
+- PreOrder Traversing:
+    - visit the root
+    - travers the left subtree
+    - traverse the right subtree
+- Inorder Traversing:
+    - Travers the left subtree
+    - visit the root
+    - traverse the right subtree
+- PostOrder Traversing:
+    - travers the left subtree
+    - travers the right subtree
+    - visit the root.
+- Algorithm T(traverse binary tree in Inorder):
+    - Let T be a pointer to a binary tree; this algo visits all the nodes of the binary tree inorder making use of a auxiliary stack Algorithm
+    - T1 Initialize: Set stack A empty and set the link variable P <- T.
+    - T2: {P = Alpha?} if P = Alpha go to step T4.
+    - T3: {stack <- P} Now P points to a nonempty binary tree that is to be traversed. Set A<-P that is push the value of P onto stack A. then set P <- LLink(P) and return to step T2.
+    - T4: {P <- stack} if stack A is empty the algorithm terminates; otherwise set P <- A
+    - T5: [Visit P] Visit node P then set P <- RLink(p) and return to step T2
+    
